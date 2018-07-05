@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>SignUp</title>
+</head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+.bg {
+    background-image: url("5.jpg");
+    height: 800px; 
+	width: 1360px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+</style>
+</head>
+
+<body background="5.jpg">
+<div class="bg">
+<div class="container">
+<font color="blue" id="id1">
+
+ <form class="form-horizontal" action="adduser" method="post">
+    <div class="form-group">
+	  </div>
+   <br></br>
+   <br></br>    
+    <div class="form-group">
+          <div class="form-group">
+      <label class="control-label col-sm-2" for="last">UserName:</label>
+      <div class="col-sm-6">
+	  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        
+ <input  name="username" placeholder="user Name" class="form-control" minlength="3" type="text" required="true">
+      </div>
+      </div>
+	  </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Password:</label>
+      <div class="col-sm-6">   
+<div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-eye-close"></i></span>	  
+     <input type="password" placeholder="Password" required="required" class="form-control"  id="password" name="password" >
+  
+      </div>
+    </div>
+	</div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="cpwd">Confirm Password:</label>
+      <div class="col-sm-6">  
+	  <div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-eye-close"></i></span>	 	  
+        <input name="password_confirm" required="required" id="password" placeholder="Confirm Password" class="form-control"  type="password" oninput="check(this)">
+      </div>
+    </div>
+	</div>
+
+
+<script language='javascript' type='text/javascript'>
+    function check(input) {
+        if (input.value != document.getElementById('password').value) {
+            input.setCustomValidity('Password Must be Matching.');
+        } else {
+            // input is valid -- reset the error message
+            input.setCustomValidity('');
+        }
+    }
+</script>
+	<div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Gender:</label>
+      <div class="col-sm-6">   
+<div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>	  
+     <input type="gender" placeholder="Male/Female" required="required" class="form-control"  id="password" name="gender" >
+  
+      </div>
+    </div>
+	</div>
+	<div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">DOB:</label>
+      <div class="col-sm-6">   
+<div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>	  
+     <input type="" placeholder="DD-MM-YYYY" required="required" class="form-control"  id="password" name="dob">
+  
+      </div>
+    </div>
+	</div>
+	<div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Country:</label>
+      <div class="col-sm-6">   
+<div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>	  
+     <input type="" placeholder="CurrentLocation" required="required" class="form-control"  id="password" name="country" >
+  
+      </div>
+    </div>
+	</div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" >Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+</body>
+
+</html>

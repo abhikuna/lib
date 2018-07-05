@@ -1,0 +1,117 @@
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<h1 style="color: #FA8072; font-family: cursive; text-align: left">
+</h1>
+<style>
+body {
+	
+	background-image : url("http://ir.spbstu.ru/userfiles/images/ea3bddfb29fdd76eb7427a3ca00ea5d7.jpg");
+	height : 100vh;
+	background-size : cover;
+	background-position : center;
+}
+
+
+.Admin-login{
+	position : absolute;
+	width : 400px;
+	padding : 5% 5 5;
+	margin : auto;
+}
+
+.form{
+	position : absolute;
+	z-index : 1;
+	background : rgba(52,80,98,0.8);
+	max-width : 300px;
+	margin : 10 10 10px;
+	padding : 20 1 15px;
+	text-align : center;
+}
+
+.form input {
+	font-family : "Roboto", sans-serif;
+	outline : 1;
+	background : #f2f2f2;
+	width : 60%;
+	border : 0;
+	margin : 0 10 10px;
+	padding : 10px;
+	box-sizing : border-box;
+	font-size : 14px;
+}
+
+.logs {
+	font-family : "Roboto", sans-serif;
+	text-transform : uppercase;
+	outline : 0;
+	background : #4CAF50;
+	width : 30%;
+	border : 0;
+	padding : 10px;
+	color : #FFFFFF;
+	font-size : 12px;
+	cursor : pointer; 
+        margin-left: 23px;
+}
+
+
+
+.cancelbtn{
+    font-family : "Roboto", sans-serif;
+	text-transform : uppercase;
+	outline : 0;
+	background : #FF6961;
+	width : 30%;
+	border : 0;
+	padding : 10px;
+	color : #FFFFFF;
+	font-size : 12px;
+	cursor : pointer;
+        margin-right: 28px; 
+}
+</style>
+
+<body>
+<div class = "Admin-login">
+<div class = "form">
+<form class = "Admin-form" action="login" method="post">
+<h1 style= "color: lightgrey; font-family: cursive">#Admin Login</h1>
+<input type = "text" placeholder= "Admin name" id = "admin" name="username"/>
+<input type = "password" placeholder= "Password" id = "pswd" name="password"/>
+<button class = "logs" onclick = "Avalidate()">Log in</button>
+<a href = "welcome.html" style = "text-decoration:none; color: #FFFFFF"><button type = "button" class = "cancelbtn"> CANCEL</button></a>
+</form>
+</div>
+</div>
+
+<script>
+function Avalidate() {
+    var Adminname = document.getElementById('admin').value;
+    var password = document.getElementById("pswd").value;
+    if (Adminname == "" && password == "") {
+        alert("please enter a valid Admin name and Password!");
+        return false;
+    }
+else if(Adminname == "") {
+	alert("Admin name field cannot be empty!");
+	return false;
+}
+else if(password == "") {
+	alert("Password field cannot be empty!");
+	return false; 
+}
+/* if(password.length < 6 || password.length > 10) {
+	alert("Password should range between 6 to 10 characters!"); 
+	return false;
+	} */
+	
+}       
+</script>
+</body>
+</html>
